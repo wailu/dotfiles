@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if { [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ]; } then
+  tmux new-window \; \
+    send-keys 'nvim' C-m \; \
+    split-window -vl 15 \; \
+    split-window -h \; \
+    select-pane -t 0 \; \;
+else
+  tmux new-session \; \
+    send-keys 'nvim' C-m \; \
+    split-window -vl 15 \; \
+    split-window -h \; \
+    select-pane -t 0 \; \;
+fi

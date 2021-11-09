@@ -1,0 +1,13 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "css",
+    "scss"
+  ],
+  "tsserver.log": "verbose",
+  "tsserver.trace.server": "verbose"
+}
