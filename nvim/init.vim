@@ -43,21 +43,21 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 
-" my maps
-nnoremap <M-h> <c-w>h
-nnoremap <M-j> <c-w>j
-nnoremap <M-k> <c-w>k
-nnoremap <M-l> <c-w>l
+" my maps...
+" paste from register 0 (latest yank)
 nnoremap <leader>v "0p
 vnoremap <leader>v "0p
 inoremap <leader>v <C-r>0
+" toggle git gutter
 nnoremap <leader>g :<C-u>GitGutterToggle<CR>
+" enlarge window height and width
+nnoremap <silent> <Leader>f <C-w>= \| :<C-u>exe "resize" (winheight(0) * 3/2) \| exe "vert resize" (winwidth(0) * 4/3)<CR>
+" fzf.vim shortcuts
+nnoremap <C-k> :<C-u>GF <CR>
+nnoremap <C-p> :<C-u>Ag <CR>
 
-" nvim terminal emulator stuffs
-if has('nvim')
-  highlight TermCursorNC ctermbg=DarkMagenta
-  highlight TermCursor ctermfg=DarkMagenta
-endif
+highlight TermCursorNC ctermbg=DarkMagenta
+highlight TermCursor ctermfg=DarkMagenta
 
 " blamer settings
 let g:blamer_enabled = 1
@@ -105,7 +105,3 @@ nmap <leader>rn <Plug>(coc-rename)
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 nnoremap <leader>p :<C-u>Prettier<CR>
 " ... end
-
-" fzf.vim shortcuts
-nnoremap <C-k> :GF <CR>
-nnoremap <C-p> :Ag <CR>h
