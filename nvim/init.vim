@@ -17,7 +17,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
 
 " syntax
+Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'peitalin/vim-jsx-typescript'
 
 " git stuffs
@@ -105,3 +107,7 @@ nmap <leader>rn <Plug>(coc-rename)
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 nnoremap <leader>p :<C-u>Prettier<CR>
 " ... end
+
+" syntax settings
+let g:vim_jsx_pretty_disable_tsx = 1
+let g:typescript_indent_disable = 1
