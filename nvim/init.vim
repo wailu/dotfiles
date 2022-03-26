@@ -45,11 +45,6 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 
-" my maps...
-" paste from register 0 (latest yank)
-nnoremap <leader>v "0p
-vnoremap <leader>v "0p
-inoremap <leader>v <C-r>0
 " toggle git gutter
 nnoremap <leader>g :<C-u>GitGutterToggle<CR>
 " enlarge window height and width
@@ -57,6 +52,7 @@ nnoremap <silent> <Leader>f <C-w>= \| :<C-u>exe "resize" (winheight(0) * 3/2) \|
 " fzf.vim shortcuts
 nnoremap <C-k> :<C-u>GF <CR>
 nnoremap <C-p> :<C-u>Ag <CR>
+nnoremap <C-h> :<C-u>Hist <CR>
 
 highlight TermCursorNC ctermbg=DarkMagenta
 highlight TermCursor ctermfg=DarkMagenta
