@@ -6,7 +6,9 @@
     "javascriptreact",
     "json",
     "css",
-    "scss"
+    "scss",
+    "haskell",
+    "lhaskell"
   ],
   "tsserver.log": "verbose",
   "tsserver.trace.server": "verbose",
