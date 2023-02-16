@@ -102,6 +102,9 @@ nmap <leader>rn <Plug>(coc-rename)
 " run prettier
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 nnoremap <leader>p :<C-u>Prettier<CR>
+
+" Add `:Format` command to format current buffer
+command! -nargs=0 Format :call CocActionAsync('format')
 " ... end
 
 " syntax settings
